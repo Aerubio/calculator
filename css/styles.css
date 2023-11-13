@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'Digital Display TFB';
+  src: url('../fonts/digital\ display\ tfb.ttf');
+}
+
+:root {
+  --red: #ff4644;  
+  --orange: #f8931f;
+  --black: #1a1a1a;
+  --gray-button: #636363;
+  --gray-display: #4d4d4d;
+  --gray-top: #333333;
+  --white: #f0f0f0;
+  --display-font-size: 60px;
+  --buttons-font-size: 30px;
+}
+
+body {
+  background-color: var(--gray-button);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator_container{
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.calculator_display{
+  background-color: var(--gray-top);
+  padding: 20px 30px 25px 30px;
+}
+
+.display{
+  font-family: 'Digital Display TFB';
+  display: flex;
+  background-color: var(--gray-display);
+  border-radius: 5px;
+  color: var(--white);
+  border: 3px solid var(--gray-button);
+  padding: 10px;
+  font-size: var(--display-font-size);
+  justify-content: flex-end;
+  line-height: 50px;
+  margin: 0;
+}
+
+.calculator_buttons{
+  background-color: var(--black);
+  font-family: 'Roboto', sans-serif;
+  padding: 10px 30px 20px 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: repeat(5, auto);
+  gap: 20px;
+}
+
+.button{
+  font-size: var(--buttons-font-size);
+  height: 60px;
+  width: 60px;
+  border-radius: 15px;
+  color: var(--white);
+  background-color: var(--gray-button);
+  border: none;
+}
+
+.ac_button{
+  background-color: var(--red);
+}
+
+.equal_button{
+  background-color: var(--orange);
+  grid-column: 4 / 5;
+  grid-row: 4 / 6;
+  height: auto;
+}
